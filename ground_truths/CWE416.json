@@ -1,0 +1,19 @@
+{
+  "sources": [
+    "free"
+  ],
+  "sinks": [
+    "printLine"
+  ],
+  "taint_paths": [
+    {
+      "source": "free",
+      "sink": "printLine",
+      "path": [
+        "func1",
+        "free",
+        "printLine"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "functions": {
+    "printLine": {
+      "address": "1400016ae", 
+      "imports": [], 
+      "signature": "undefined printLine(char * param_1)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x1400016aeL", 
+            "to": "0x1400016cdL"
+          }, 
+          {
+            "from": "0x1400016aeL", 
+            "to": "0x1400016c1L"
+          }, 
+          {
+            "from": "0x1400016c1L", 
+            "to": "0x140002f08L"
+          }, 
+          {
+            "from": "0x1400016c1L", 
+            "to": "0x1400016cdL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "1400016ae", 
+            "id": "0x1400016aeL"
+          }, 
+          {
+            "start": "1400016c1", 
+            "id": "0x1400016c1L"
+          }, 
+          {
+            "start": "1400016cd", 
+            "id": "0x1400016cdL"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": [
+          "puts"
+        ]
+      }, 
+      "decomp": "\r\nvoid printLine(char *param_1)\r\n\r\n{\r\n  if (param_1 != (char *)0x0) {\r\n    puts(param_1);\r\n  }\r\n  return;\r\n}\r\n\r\n", 
+      "name": "printLine", 
+      "asm": [
+        "PUSH RBP", 
+        "MOV RBP,RSP", 
+        "SUB RSP,0x20", 
+        "MOV qword ptr [RBP + 0x10],RCX", 
+        "CMP qword ptr [RBP + 0x10],0x0", 
+        "JZ 0x1400016cd", 
+        "MOV RAX,qword ptr [RBP + 0x10]", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002f08", 
+        "NOP", 
+        "ADD RSP,0x20", 
+        "POP RBP", 
+        "RET"
+      ]
+    }, 
+    "__acrt_iob_func": {
+      "address": "140002ec0", 
+      "imports": [], 
+      "signature": "undefined __acrt_iob_func(void)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002ec0L", 
+            "to": "0x1400093d8L"
+          }, 
+          {
+            "from": "0x140002ec0L", 
+            "to": "0x20L"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002ec0", 
+            "id": "0x140002ec0L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nvoid __acrt_iob_func(void)\r\n\r\n{\r\n                    /* WARNING: Could not recover jumptable at 0x000140002ec0. Too many branches */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  __acrt_iob_func();\r\n  return;\r\n}\r\n\r\n", 
+      "name": "__acrt_iob_func", 
+      "asm": [
+        "JMP qword ptr [0x1400093d8]"
+      ]
+    }, 
+    "fprintf": {
+      "address": "140002da0", 
+      "imports": [], 
+      "signature": "int fprintf(FILE * _File, char * _Format, ...)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002da0L", 
+            "to": "0x140002ed8L"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002da0", 
+            "id": "0x140002da0L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": [
+          "__stdio_common_vfprintf"
+        ]
+      }, 
+      "decomp": "\r\nint __cdecl fprintf(FILE *_File,char *_Format,...)\r\n\r\n{\r\n  int iVar1;\r\n  undefined8 in_R8;\r\n  undefined8 in_R9;\r\n  undefined8 local_res18;\r\n  undefined8 local_res20;\r\n  char *ap;\r\n  \r\n  local_res18 = in_R8;\r\n  local_res20 = in_R9;\r\n  iVar1 = __stdio_common_vfprintf(0x24,_File,_Format,0,&local_res18);\r\n  return iVar1;\r\n}\r\n\r\n", 
+      "name": "fprintf", 
+      "asm": [
+        "SUB RSP,0x48", 
+        "LEA RAX,[RSP + 0x60]", 
+        "MOV qword ptr [RSP + 0x60],R8", 
+        "MOV R8,RDX", 
+        "MOV RDX,RCX", 
+        "MOV qword ptr [RSP + 0x20],RAX", 
+        "MOV ECX,0x24", 
+        "MOV qword ptr [RSP + 0x68],R9", 
+        "XOR R9D,R9D", 
+        "MOV qword ptr [RSP + 0x38],RAX", 
+        "CALL 0x140002ed8", 
+        "ADD RSP,0x48", 
+        "RET"
+      ]
+    }, 
+    "fgets": {
+      "address": "140002ef8", 
+      "imports": [], 
+      "signature": "char * fgets(char * _Buf, int _MaxCount, FILE * _File)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002ef8L", 
+            "to": "0x140009410L"
+          }, 
+          {
+            "from": "0x140002ef8L", 
+            "to": "0x27L"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002ef8", 
+            "id": "0x140002ef8L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nchar * __cdecl fgets(char *_Buf,int _MaxCount,FILE *_File)\r\n\r\n{\r\n  char *pcVar1;\r\n  \r\n                    /* WARNING: Could not recover jumptable at 0x000140002ef8. Too many branches */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  pcVar1 = fgets(_Buf,_MaxCount,_File);\r\n  return pcVar1;\r\n}\r\n\r\n", 
+      "name": "fgets", 
+      "asm": [
+        "JMP qword ptr [0x140009410]"
+      ]
+    }, 
+    "strlen": {
+      "address": "140002eb0", 
+      "imports": [], 
+      "signature": "size_t strlen(char * _Str)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002eb0L", 
+            "to": "0x140009440L"
+          }, 
+          {
+            "from": "0x140002eb0L", 
+            "to": "0x2cL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002eb0", 
+            "id": "0x140002eb0L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nsize_t __cdecl strlen(char *_Str)\r\n\r\n{\r\n  size_t sVar1;\r\n  \r\n                    /* WARNING: Could not recover jumptable at 0x000140002eb0. Too many branches */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  sVar1 = strlen(_Str);\r\n  return sVar1;\r\n}\r\n\r\n", 
+      "name": "strlen", 
+      "asm": [
+        "JMP qword ptr [0x140009440]"
+      ]
+    }, 
+    "func1": {
+      "address": "140001430", 
+      "imports": [], 
+      "signature": "undefined func1(void)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140001430L", 
+            "to": "0x140002eb0L"
+          }, 
+          {
+            "from": "0x140001430L", 
+            "to": "0x14000156aL"
+          }, 
+          {
+            "from": "0x140001430L", 
+            "to": "0x1400014cdL"
+          }, 
+          {
+            "from": "0x1400014cdL", 
+            "to": "0x20L"
+          }, 
+          {
+            "from": "0x1400014cdL", 
+            "to": "0x140002ef8L"
+          }, 
+          {
+            "from": "0x1400014cdL", 
+            "to": "0x14000154dL"
+          }, 
+          {
+            "from": "0x1400014cdL", 
+            "to": "0x14000150cL"
+          }, 
+          {
+            "from": "0x14000150cL", 
+            "to": "0x140002eb0L"
+          }, 
+          {
+            "from": "0x14000150cL", 
+            "to": "0x14000156aL"
+          }, 
+          {
+            "from": "0x14000150cL", 
+            "to": "0x140001523L"
+          }, 
+          {
+            "from": "0x140001523L", 
+            "to": "0x14000156aL"
+          }, 
+          {
+            "from": "0x140001523L", 
+            "to": "0x140001539L"
+          }, 
+          {
+            "from": "0x140001539L", 
+            "to": "0x14000156aL"
+          }, 
+          {
+            "from": "0x14000154dL", 
+            "to": "0x1400016aeL"
+          }, 
+          {
+            "from": "0x14000154dL", 
+            "to": "0x14000156aL"
+          }, 
+          {
+            "from": "0x14000156aL", 
+            "to": "0x20L"
+          }, 
+          {
+            "from": "0x14000156aL", 
+            "to": "0x140002da0L"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140001430", 
+            "id": "0x140001430L"
+          }, 
+          {
+            "start": "1400014cd", 
+            "id": "0x1400014cdL"
+          }, 
+          {
+            "start": "14000150c", 
+            "id": "0x14000150cL"
+          }, 
+          {
+            "start": "140001523", 
+            "id": "0x140001523L"
+          }, 
+          {
+            "start": "140001539", 
+            "id": "0x140001539L"
+          }, 
+          {
+            "start": "14000154d", 
+            "id": "0x14000154dL"
+          }, 
+          {
+            "start": "14000156a", 
+            "id": "0x14000156aL"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": [
+          "strlen", 
+          "__acrt_iob_func", 
+          "fgets", 
+          "strlen", 
+          "printLine", 
+          "__acrt_iob_func", 
+          "fprintf"
+        ]
+      }, 
+      "decomp": "\r\nvoid func1(void)\r\n\r\n{\r\n  FILE *pFVar1;\r\n  char *pcVar2;\r\n  char local_88 [112];\r\n  size_t local_18;\r\n  char *local_10;\r\n  \r\n  local_88[0] = '\\0';\r\n  local_88[1] = '\\0';\r\n  local_88[2] = '\\0';\r\n  local_88[3] = '\\0';\r\n  local_88[4] = '\\0';\r\n  local_88[5] = '\\0';\r\n  local_88[6] = '\\0';\r\n  local_88[7] = '\\0';\r\n  local_88[8] = '\\0';\r\n  local_88[9] = '\\0';\r\n  local_88[10] = '\\0';\r\n  local_88[0xb] = '\\0';\r\n  local_88[0xc] = '\\0';\r\n  local_88[0xd] = '\\0';\r\n  local_88[0xe] = '\\0';\r\n  local_88[0xf] = '\\0';\r\n  local_88[0x10] = '\\0';\r\n  local_88[0x11] = '\\0';\r\n  local_88[0x12] = '\\0';\r\n  local_88[0x13] = '\\0';\r\n  local_88[0x14] = '\\0';\r\n  local_88[0x15] = '\\0';\r\n  local_88[0x16] = '\\0';\r\n  local_88[0x17] = '\\0';\r\n  local_88[0x18] = '\\0';\r\n  local_88[0x19] = '\\0';\r\n  local_88[0x1a] = '\\0';\r\n  local_88[0x1b] = '\\0';\r\n  local_88[0x1c] = '\\0';\r\n  local_88[0x1d] = '\\0';\r\n  local_88[0x1e] = '\\0';\r\n  local_88[0x1f] = '\\0';\r\n  local_88[0x20] = '\\0';\r\n  local_88[0x21] = '\\0';\r\n  local_88[0x22] = '\\0';\r\n  local_88[0x23] = '\\0';\r\n  local_88[0x24] = '\\0';\r\n  local_88[0x25] = '\\0';\r\n  local_88[0x26] = '\\0';\r\n  local_88[0x27] = '\\0';\r\n  local_88[0x28] = '\\0';\r\n  local_88[0x29] = '\\0';\r\n  local_88[0x2a] = '\\0';\r\n  local_88[0x2b] = '\\0';\r\n  local_88[0x2c] = '\\0';\r\n  local_88[0x2d] = '\\0';\r\n  local_88[0x2e] = '\\0';\r\n  local_88[0x2f] = '\\0';\r\n  local_88[0x30] = '\\0';\r\n  local_88[0x31] = '\\0';\r\n  local_88[0x32] = '\\0';\r\n  local_88[0x33] = '\\0';\r\n  local_88[0x34] = '\\0';\r\n  local_88[0x35] = '\\0';\r\n  local_88[0x36] = '\\0';\r\n  local_88[0x37] = '\\0';\r\n  local_88[0x38] = '\\0';\r\n  local_88[0x39] = '\\0';\r\n  local_88[0x3a] = '\\0';\r\n  local_88[0x3b] = '\\0';\r\n  local_88[0x3c] = '\\0';\r\n  local_88[0x3d] = '\\0';\r\n  local_88[0x3e] = '\\0';\r\n  local_88[0x3f] = '\\0';\r\n  local_88[0x40] = '\\0';\r\n  local_88[0x41] = '\\0';\r\n  local_88[0x42] = '\\0';\r\n  local_88[0x43] = '\\0';\r\n  local_88[0x44] = '\\0';\r\n  local_88[0x45] = '\\0';\r\n  local_88[0x46] = '\\0';\r\n  local_88[0x47] = '\\0';\r\n  local_88[0x48] = '\\0';\r\n  local_88[0x49] = '\\0';\r\n  local_88[0x4a] = '\\0';\r\n  local_88[0x4b] = '\\0';\r\n  local_88[0x4c] = '\\0';\r\n  local_88[0x4d] = '\\0';\r\n  local_88[0x4e] = '\\0';\r\n  local_88[0x4f] = '\\0';\r\n  local_88[0x50] = '\\0';\r\n  local_88[0x51] = '\\0';\r\n  local_88[0x52] = '\\0';\r\n  local_88[0x53] = '\\0';\r\n  local_88[0x54] = '\\0';\r\n  local_88[0x55] = '\\0';\r\n  local_88[0x56] = '\\0';\r\n  local_88[0x57] = '\\0';\r\n  local_88[0x58] = '\\0';\r\n  local_88[0x59] = '\\0';\r\n  local_88[0x5a] = '\\0';\r\n  local_88[0x5b] = '\\0';\r\n  local_88[0x5c] = '\\0';\r\n  local_88[0x5d] = '\\0';\r\n  local_88[0x5e] = '\\0';\r\n  local_88[0x5f] = '\\0';\r\n  local_88[0x60] = '\\0';\r\n  local_88[0x61] = '\\0';\r\n  local_88[0x62] = '\\0';\r\n  local_88[99] = '\\0';\r\n  local_10 = local_88;\r\n  local_18 = strlen(local_10);\r\n  if (1 < 100 - local_18) {\r\n    pFVar1 = (FILE *)__acrt_iob_func(0);\r\n    pcVar2 = fgets(local_10 + local_18,100 - (int)local_18,pFVar1);\r\n    if (pcVar2 == (char *)0x0) {\r\n      printLine(\"fgets() failed\");\r\n      local_10[local_18] = '\\0';\r\n    }\r\n    else {\r\n      local_18 = strlen(local_10);\r\n      if ((local_18 != 0) && (local_10[local_18 - 1] == '\\n')) {\r\n        local_10[local_18 - 1] = '\\0';\r\n      }\r\n    }\r\n  }\r\n  pFVar1 = (FILE *)__acrt_iob_func(1);\r\n  fprintf(pFVar1,local_10);\r\n  return;\r\n}\r\n\r\n", 
+      "name": "func1", 
+      "asm": [
+        "PUSH RBP", 
+        "MOV RBP,RSP", 
+        "SUB RSP,0xa0", 
+        "MOV qword ptr [RBP + -0x80],0x0", 
+        "MOV qword ptr [RBP + -0x78],0x0", 
+        "MOV qword ptr [RBP + -0x70],0x0", 
+        "MOV qword ptr [RBP + -0x68],0x0", 
+        "MOV qword ptr [RBP + -0x60],0x0", 
+        "MOV qword ptr [RBP + -0x58],0x0", 
+        "MOV qword ptr [RBP + -0x50],0x0", 
+        "MOV qword ptr [RBP + -0x48],0x0", 
+        "MOV qword ptr [RBP + -0x40],0x0", 
+        "MOV qword ptr [RBP + -0x38],0x0", 
+        "MOV qword ptr [RBP + -0x30],0x0", 
+        "MOV qword ptr [RBP + -0x28],0x0", 
+        "MOV dword ptr [RBP + -0x20],0x0", 
+        "LEA RAX,[RBP + -0x80]", 
+        "MOV qword ptr [RBP + -0x8],RAX", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002eb0", 
+        "MOV qword ptr [RBP + -0x10],RAX", 
+        "MOV EAX,0x64", 
+        "SUB RAX,qword ptr [RBP + -0x10]", 
+        "CMP RAX,0x1", 
+        "JBE 0x14000156a", 
+        "MOV ECX,0x0", 
+        "MOV RAX,qword ptr [0x1400093d8]", 
+        "CALL RAX", 
+        "MOV RDX,RAX", 
+        "MOV RAX,qword ptr [RBP + -0x10]", 
+        "MOV ECX,EAX", 
+        "MOV EAX,0x64", 
+        "SUB EAX,ECX", 
+        "MOV R9D,EAX", 
+        "MOV RCX,qword ptr [RBP + -0x8]", 
+        "MOV RAX,qword ptr [RBP + -0x10]", 
+        "ADD RAX,RCX", 
+        "MOV R8,RDX", 
+        "MOV EDX,R9D", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002ef8", 
+        "TEST RAX,RAX", 
+        "JZ 0x14000154d", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002eb0", 
+        "MOV qword ptr [RBP + -0x10],RAX", 
+        "CMP qword ptr [RBP + -0x10],0x0", 
+        "JZ 0x14000156a", 
+        "MOV RAX,qword ptr [RBP + -0x10]", 
+        "LEA RDX,[RAX + -0x1]", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "ADD RAX,RDX", 
+        "MOVZX EAX,byte ptr [RAX]", 
+        "CMP AL,0xa", 
+        "JNZ 0x14000156a", 
+        "MOV RAX,qword ptr [RBP + -0x10]", 
+        "LEA RDX,[RAX + -0x1]", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "ADD RAX,RDX", 
+        "MOV byte ptr [RAX],0x0", 
+        "JMP 0x14000156a", 
+        "LEA RAX,[0x140005000]", 
+        "MOV RCX,RAX", 
+        "CALL 0x1400016ae", 
+        "MOV RDX,qword ptr [RBP + -0x8]", 
+        "MOV RAX,qword ptr [RBP + -0x10]", 
+        "ADD RAX,RDX", 
+        "MOV byte ptr [RAX],0x0", 
+        "MOV ECX,0x1", 
+        "MOV RAX,qword ptr [0x1400093d8]", 
+        "CALL RAX", 
+        "MOV RCX,RAX", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "MOV RDX,RAX", 
+        "CALL 0x140002da0", 
+        "NOP", 
+        "ADD RSP,0xa0", 
+        "POP RBP", 
+        "RET"
+      ]
+    }
+  }, 
+  "binary": "ufs_B2B.exe", 
+  "arch": "x86"
+}

@@ -1,0 +1,284 @@
+{
+  "functions": {
+    "malloc": {
+      "address": "140002ec8", 
+      "imports": [], 
+      "signature": "void * malloc(size_t _Size)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002ec8L", 
+            "to": "0x140008330L"
+          }, 
+          {
+            "from": "0x140002ec8L", 
+            "to": "0xfL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002ec8", 
+            "id": "0x140002ec8L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nvoid * __cdecl malloc(size_t _Size)\r\n\r\n{\r\n  void *pvVar1;\r\n  \r\n                    /* WARNING: Could not recover jumptable at 0x000140002ec8. Too many branches */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  pvVar1 = malloc(_Size);\r\n  return pvVar1;\r\n}\r\n\r\n", 
+      "name": "malloc", 
+      "asm": [
+        "JMP qword ptr [0x140008330]"
+      ]
+    }, 
+    "printLine": {
+      "address": "1400015be", 
+      "imports": [], 
+      "signature": "undefined printLine(char * param_1)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x1400015beL", 
+            "to": "0x1400015ddL"
+          }, 
+          {
+            "from": "0x1400015beL", 
+            "to": "0x1400015d1L"
+          }, 
+          {
+            "from": "0x1400015d1L", 
+            "to": "0x140002e10L"
+          }, 
+          {
+            "from": "0x1400015d1L", 
+            "to": "0x1400015ddL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "1400015be", 
+            "id": "0x1400015beL"
+          }, 
+          {
+            "start": "1400015d1", 
+            "id": "0x1400015d1L"
+          }, 
+          {
+            "start": "1400015dd", 
+            "id": "0x1400015ddL"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": [
+          "puts"
+        ]
+      }, 
+      "decomp": "\r\nvoid printLine(char *param_1)\r\n\r\n{\r\n  if (param_1 != (char *)0x0) {\r\n    puts(param_1);\r\n  }\r\n  return;\r\n}\r\n\r\n", 
+      "name": "printLine", 
+      "asm": [
+        "PUSH RBP", 
+        "MOV RBP,RSP", 
+        "SUB RSP,0x20", 
+        "MOV qword ptr [RBP + 0x10],RCX", 
+        "CMP qword ptr [RBP + 0x10],0x0", 
+        "JZ 0x1400015dd", 
+        "MOV RAX,qword ptr [RBP + 0x10]", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002e10", 
+        "NOP", 
+        "ADD RSP,0x20", 
+        "POP RBP", 
+        "RET"
+      ]
+    }, 
+    "memset": {
+      "address": "140002db0", 
+      "imports": [], 
+      "signature": "void * memset(void * _Dst, int _Val, size_t _Size)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002db0L", 
+            "to": "0x140008438L"
+          }, 
+          {
+            "from": "0x140002db0L", 
+            "to": "0x2bL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002db0", 
+            "id": "0x140002db0L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nvoid * __cdecl memset(void *_Dst,int _Val,size_t _Size)\r\n\r\n{\r\n  void *pvVar1;\r\n  \r\n                    /* WARNING: Could not recover jumptable at 0x000140002db0. Too many branches */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  pvVar1 = memset(_Dst,_Val,_Size);\r\n  return pvVar1;\r\n}\r\n\r\n", 
+      "name": "memset", 
+      "asm": [
+        "JMP qword ptr [0x140008438]"
+      ]
+    }, 
+    "exit": {
+      "address": "140002e78", 
+      "imports": [], 
+      "signature": "void exit(int _Code)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002e78L", 
+            "to": "0x1400083c0L"
+          }, 
+          {
+            "from": "0x140002e78L", 
+            "to": "0x1eL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002e78", 
+            "id": "0x140002e78L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nvoid __cdecl exit(int _Code)\r\n\r\n{\r\n                    /* WARNING: Could not recover jumptable at 0x000140002e78. Too many branches */\r\n                    /* WARNING: Subroutine does not return */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  exit(_Code);\r\n  return;\r\n}\r\n\r\n", 
+      "name": "exit", 
+      "asm": [
+        "JMP qword ptr [0x1400083c0]"
+      ]
+    }, 
+    "func1": {
+      "address": "140001430", 
+      "imports": [], 
+      "signature": "undefined func1(void)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140001430L", 
+            "to": "0x140002ec8L"
+          }, 
+          {
+            "from": "0x140001430L", 
+            "to": "0x14000145fL"
+          }, 
+          {
+            "from": "0x140001430L", 
+            "to": "0x140001455L"
+          }, 
+          {
+            "from": "0x140001455L", 
+            "to": "0x140002e78L"
+          }, 
+          {
+            "from": "0x14000145fL", 
+            "to": "0x140002db0L"
+          }, 
+          {
+            "from": "0x14000145fL", 
+            "to": "0x140002ec0L"
+          }, 
+          {
+            "from": "0x14000145fL", 
+            "to": "0x1400015beL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140001430", 
+            "id": "0x140001430L"
+          }, 
+          {
+            "start": "140001455", 
+            "id": "0x140001455L"
+          }, 
+          {
+            "start": "14000145f", 
+            "id": "0x14000145fL"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": [
+          "malloc", 
+          "exit", 
+          "memset", 
+          "free", 
+          "printLine"
+        ]
+      }, 
+      "decomp": "\r\nvoid func1(void)\r\n\r\n{\r\n  char *_Dst;\r\n  \r\n  _Dst = (char *)malloc(100);\r\n  if (_Dst == (char *)0x0) {\r\n                    /* WARNING: Subroutine does not return */\r\n    exit(-1);\r\n  }\r\n  memset(_Dst,0x41,99);\r\n  _Dst[99] = '\\0';\r\n  free(_Dst);\r\n  printLine(_Dst);\r\n  return;\r\n}\r\n\r\n", 
+      "name": "func1", 
+      "asm": [
+        "PUSH RBP", 
+        "MOV RBP,RSP", 
+        "SUB RSP,0x30", 
+        "MOV qword ptr [RBP + -0x8],0x0", 
+        "MOV ECX,0x64", 
+        "CALL 0x140002ec8", 
+        "MOV qword ptr [RBP + -0x8],RAX", 
+        "CMP qword ptr [RBP + -0x8],0x0", 
+        "JNZ 0x14000145f", 
+        "MOV ECX,0xffffffff", 
+        "CALL 0x140002e78", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "MOV R8D,0x63", 
+        "MOV EDX,0x41", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002db0", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "ADD RAX,0x63", 
+        "MOV byte ptr [RAX],0x0", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "MOV RCX,RAX", 
+        "CALL 0x140002ec0", 
+        "MOV RAX,qword ptr [RBP + -0x8]", 
+        "MOV RCX,RAX", 
+        "CALL 0x1400015be", 
+        "NOP", 
+        "ADD RSP,0x30", 
+        "POP RBP", 
+        "RET"
+      ]
+    }, 
+    "free": {
+      "address": "140002ec0", 
+      "imports": [], 
+      "signature": "void free(void * _Memory)", 
+      "cfg": {
+        "edges": [
+          {
+            "from": "0x140002ec0L", 
+            "to": "0x140008328L"
+          }, 
+          {
+            "from": "0x140002ec0L", 
+            "to": "0xeL"
+          }
+        ], 
+        "nodes": [
+          {
+            "start": "140002ec0", 
+            "id": "0x140002ec0L"
+          }
+        ]
+      }, 
+      "callgraph": {
+        "calls": []
+      }, 
+      "decomp": "\r\nvoid __cdecl free(void *_Memory)\r\n\r\n{\r\n                    /* WARNING: Could not recover jumptable at 0x000140002ec0. Too many branches */\r\n                    /* WARNING: Treating indirect jump as call */\r\n  free(_Memory);\r\n  return;\r\n}\r\n\r\n", 
+      "name": "free", 
+      "asm": [
+        "JMP qword ptr [0x140008328]"
+      ]
+    }
+  }, 
+  "binary": "uaf_B2B.exe", 
+  "arch": "x86"
+}

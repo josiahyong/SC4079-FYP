@@ -1,0 +1,19 @@
+{
+  "sources": [
+    "fgets"
+  ],
+  "sinks": [
+    "_execl"
+  ],
+  "taint_paths": [
+    {
+      "source": "fgets",
+      "sink": "_execl",
+      "path": [
+        "func1",
+        "fgets",
+        "_execl"
+      ]
+    }
+  ]
+}
